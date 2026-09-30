@@ -1,0 +1,55 @@
+# ---- Build output -----------------------------------------------------------
+# Everything the Makefile produces goes under build/ (BUILD_DIR). `make clean`
+# removes it and the next build recreates it.
+/build/
+
+# Stray per-object outputs, in case a file is ever compiled outside build/:
+# dependency files (-MMD), stack usage (-fstack-usage), cyclomatic complexity
+# (-fcyclomatic-complexity) and assembler listings.
+*.o
+*.d
+*.su
+*.cyclo
+*.lst
+
+# Signing leaves its output in build/ too. Binary/ is NOT ignored: it holds the
+# bootloader, the weight blobs and the prebuilt signed image, all of which are
+# flashed from there.
+
+# ---- Files awaiting review --------------------------------------------------
+# Unused ST files moved aside for review. Delete the folder once reviewed.
+/staged-for-deletion/
+
+# ---- Model generation (Model/generate-n6-model.sh) --------------------------
+# stedgeai's working folders. The script copies what the build needs (the .c,
+# _ecblobs.h and _data.hex files) into Model/, and those stay tracked.
+/Model/st_ai_output/
+/Model/st_ai_ws/
+
+# ---- STM32CubeIDE / Eclipse ---------------------------------------------------
+# .project and .cproject are the shared project definition and stay tracked.
+# The workspace (.metadata) lives outside this folder. .settings/ holds the
+# indexer's per-machine discovery results, which the IDE regenerates.
+/.settings/
+.metadata/
+RemoteSystemsTempFiles/
+*.launch.bak
+
+# Debug-session and programmer scratch files
+readback*.bin
+*.log
+
+# ---- Python (weight export and host scripts) --------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- Editors and operating systems ------------------------------------------
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+desktop.ini
+.DS_Store

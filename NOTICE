@@ -1,0 +1,32 @@
+VisionLink
+Copyright 2026 The VisionLink Authors
+
+VisionLink's own source files are licensed under the Apache License 2.0 (see
+LICENSE). They are the files whose first line carries
+"SPDX-License-Identifier: Apache-2.0".
+
+This repository also contains software and data from other parties, each under
+its own license. Those files keep their original headers:
+
+- STMicroelectronics: application base, drivers, middleware, configuration
+  headers, the micro T-Kernel ports of ST's FreeRTOS glue, and generated
+  network code. ST SLA0044 or BSD-3-Clause, as marked in each file. See
+  THIRD_PARTY_LICENSES.md, App/LICENSE.md and Platform/LICENSE.md. SLA0044
+  code may only be used with STMicroelectronics microcontrollers and
+  microprocessors.
+- TRON Forum: micro T-Kernel 3.0 and mtk3_bsp2 (ThirdParty/mtk3_bsp2),
+  T-License 2.2.
+- Microsoft: USBX (ThirdParty/STM32Cube_FW_N6/Middlewares/ST/usbx), Microsoft
+  Azure RTOS license terms; Platform/Inc/ux_user.h, MIT License.
+- Google: MediaPipe Hands palm detection and hand landmark models, via the
+  PINTO model zoo (Katsuya Hyodo), quantized by STMicroelectronics. Apache
+  License 2.0 (Model/LICENSE.txt).
+- Kazuhito Takahashi: keypoint gesture classifier weights in
+  App/Inc/gesture_model_data.h, from hand-gesture-recognition-using-mediapipe
+  (https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe).
+  Apache License 2.0.
+- HaGRID (A. Kapitanov et al., https://github.com/hukenovs/hagrid): the
+  presenter classifier's weights in App/Inc/gesture_hagrid_model_data.h were
+  trained on the HaGRID dataset and are licensed under CC BY-SA 4.0
+  (https://creativecommons.org/licenses/by-sa/4.0/). Building with
+  PRESENTER=OFF leaves them out.
