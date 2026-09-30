@@ -340,6 +340,10 @@ VisionLink/
 | Host sees no USB device | The CN18 cable carries no data, switch to a cable that can carry data |
 | Left and right hands swapped | Change `CAMERA_MIRRORED`, then clean and rebuild |
 
+## Author information
+- **Gotawa Aryo Prakoso, Hardware and Embedded Engineer**. Embedded system work: µT-Kernel 3.0 firmware on the STM32N6570-DK, drivers, system integration.
+- **Gita Bangun Prakoso, Software and AI Engineer**. AI model work: evaluation of the current model; also exploration, comparison, and retraining of the hand landmark model in Python.
+
 ## Credits and licenses
 
 | Component | Source | License |
